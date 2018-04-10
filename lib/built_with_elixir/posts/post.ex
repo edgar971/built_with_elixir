@@ -10,6 +10,7 @@ defmodule BuiltWithElixir.Posts.Post do
     field :title, :string
     field :type, :string
     field :website_url, :string
+    field :image_url, :string
 
     timestamps()
   end
@@ -17,7 +18,7 @@ defmodule BuiltWithElixir.Posts.Post do
   @doc false
   def changeset(post, attrs) do
     post
-    |> cast(attrs, [:title, :description, :author, :website_url, :github_url, :type])
-    |> validate_required([:title, :description, :author, :website_url, :github_url, :type])
+    |> cast(attrs, [:title, :description, :author, :website_url, :github_url, :image_url, :type])
+    |> validate_required([:title, :description, :author, :website_url, :github_url, :image_url, :type])
   end
 end

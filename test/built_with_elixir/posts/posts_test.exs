@@ -6,9 +6,9 @@ defmodule BuiltWithElixir.PostsTest do
   describe "posts" do
     alias BuiltWithElixir.Posts.Post
 
-    @valid_attrs %{author: "some author", description: "some description", github_url: "some github_url", title: "some title", type: "some type", website_url: "some website_url"}
-    @update_attrs %{author: "some updated author", description: "some updated description", github_url: "some updated github_url", title: "some updated title", type: "some updated type", website_url: "some updated website_url"}
-    @invalid_attrs %{author: nil, description: nil, github_url: nil, title: nil, type: nil, website_url: nil}
+    @valid_attrs %{author: "some author", description: "some description", github_url: "some github_url", title: "some title", type: "some type", website_url: "some website_url", image_url: "some image_url"}
+    @update_attrs %{author: "some updated author", description: "some updated description", github_url: "some updated github_url", title: "some updated title", type: "some updated type", website_url: "some updated website_url", image_url: "some updated image_url"}
+    @invalid_attrs %{author: nil, description: nil, github_url: nil, title: nil, type: nil, website_url: nil, image_url: nil}
 
     def post_fixture(attrs \\ %{}) do
       {:ok, post} =
@@ -37,6 +37,7 @@ defmodule BuiltWithElixir.PostsTest do
       assert post.title == "some title"
       assert post.type == "some type"
       assert post.website_url == "some website_url"
+      assert post.image_url == "some image_url"
     end
 
     test "create_post/1 with invalid data returns error changeset" do
@@ -53,6 +54,7 @@ defmodule BuiltWithElixir.PostsTest do
       assert post.title == "some updated title"
       assert post.type == "some updated type"
       assert post.website_url == "some updated website_url"
+      assert post.image_url == "some updated image_url"
     end
 
     test "update_post/2 with invalid data returns error changeset" do

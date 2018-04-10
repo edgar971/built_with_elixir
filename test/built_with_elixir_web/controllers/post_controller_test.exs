@@ -9,7 +9,8 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
     "github_url" => "some github_url",
     "title" => "some title",
     "type" => "some type",
-    "website_url" => "some website_url"
+    "website_url" => "some website_url",
+    "image_url" => "some image_url"
   }
 
   def fixture(:post) do
@@ -23,7 +24,7 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
 
   describe "index" do
     setup [:create_post]
-
+    
     test "lists all posts", %{conn: conn} do
       conn = get(conn, post_path(conn, :index))
       %{"id" => id} = response = hd(json_response(conn, 200)["data"])

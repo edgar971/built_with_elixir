@@ -11,12 +11,15 @@ defmodule BuiltWithElixirWeb.PostView do
   end
 
   def render("post.json", %{post: post}) do
-    %{id: post.id,
+    %{
+      id: post.id,
       title: post.title,
       description: post.description,
       author: post.author,
       website_url: post.website_url,
       github_url: post.github_url,
-      type: post.type}
+      type: post.type,
+      image_url: post.image_url
+    }
   end
 end
