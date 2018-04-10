@@ -1,12 +1,12 @@
-defmodule BuiltWithElixir.Posts do
+defmodule BuiltWithElixir.Projects do
   @moduledoc """
-  The Posts context.
+  The Projects context.
   """
 
   import Ecto.Query, warn: false
   alias BuiltWithElixir.Repo
 
-  alias BuiltWithElixir.Posts.Post
+  alias BuiltWithElixir.Projects.Post
 
   @doc """
   Returns the list of posts.

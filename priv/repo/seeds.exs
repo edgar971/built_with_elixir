@@ -1,4 +1,5 @@
-alias BuiltWithElixir.Posts
+alias BuiltWithElixir.Projects
+
 # Script for populating the database. You can run it as:
 #
 #     mix run priv/repo/seeds.exs
@@ -15,4 +16,4 @@ posts =
        {:ok, json} <- JSON.decode(body),
        do: json
 
-Enum.map(posts, fn post -> Posts.create_post(post) end)
+Enum.map(posts, fn post -> Projects.create_post(post) end)

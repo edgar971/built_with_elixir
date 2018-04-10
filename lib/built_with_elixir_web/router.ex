@@ -23,6 +23,6 @@ defmodule BuiltWithElixirWeb.Router do
   scope "/api", BuiltWithElixirWeb do
     pipe_through :api
     
-    get "/posts", PostController, :index
+    resources "/posts", PostController, only: [:index, :show]
   end
 end

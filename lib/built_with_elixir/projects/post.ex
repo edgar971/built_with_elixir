@@ -1,4 +1,4 @@
-defmodule BuiltWithElixir.Posts.Post do
+defmodule BuiltWithElixir.Projects.Post do
   use Ecto.Schema
   import Ecto.Changeset
 
