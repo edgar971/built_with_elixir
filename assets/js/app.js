@@ -1,21 +1,64 @@
-// Brunch automatically concatenates all files in your
-// watched paths. Those paths can be configured at
-// config.paths.watched in "brunch-config.js".
-//
-// However, those files will only be executed if
-// explicitly imported. The only exception are files
-// in vendor, which are never wrapped in imports and
-// therefore are always executed.
-
-// Import dependencies
-//
-// If you no longer want to use a dependency, remember
-// to also remove its path from "config.paths.watched".
+import ReactDOM from 'react-dom'
+import React from 'react'
 import "phoenix_html"
+import App from './components/app'
 
-// Import local files
-//
-// Local files can be imported directly using relative
-// paths "./socket" or full ones "web/static/js/socket".
+
+const projects = [
+  {
+    id: 12323232,
+    title: "Just My Luck",
+    description: "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est",
+    author: "iledbury0",
+    website_url: "https://techcrunch.com/some/cool/link/that/goes/nowhere",
+    github_url: "blogs.com",
+    image_url: "/images/image-to-text.png",
+    type: "library"
+  },
+  {
+    id: 1232323555,
+    title: "Just My Luck",
+    description: "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est",
+    author: "iledbury0",
+    website_url: "https://techcrunch.com/some/cool/link/that/goes/nowhere",
+    github_url: "blogs.com",
+    image_url: "/images/image-to-text.png",
+    type: "library"
+  },
+  {
+    id: 12323235553,
+    title: "An Awesome Project I created",
+    description: "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est",
+    author: "iledbury0",
+    website_url: "https://techcrunch.com/some/cool/link/that/goes/nowhere",
+    github_url: "blogs.com",
+    image_url: "/images/image-to-text.png",
+    type: "library"
+  },
+  {
+    id: 12323235551,
+    title: "Texto: Random tool",
+    description: "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est",
+    author: "iledbury0",
+    website_url: "https://techcrunch.com/some/cool/link/that/goes/nowhere",
+    github_url: "blogs.com",
+    image_url: "/images/image-to-text.png",
+    type: "library"
+  },
+  {
+    id: 123232355511,
+    title: "Just My Luck",
+    description: "magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est",
+    author: "iledbury0",
+    website_url: "https://techcrunch.com/some/cool/link/that/goes/nowhere",
+    github_url: "blogs.com",
+    image_url: "/images/image-to-text.png",
+    type: "library"
+  }
+]
+
 
 // import socket from "./socket"
+
+ReactDOM.render(<App projects={projects} />, document.querySelector('#app-root'))
+

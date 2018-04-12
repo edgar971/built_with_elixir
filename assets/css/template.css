@@ -2596,9 +2596,16 @@
 			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
 			transition: transform 0.5s ease, opacity 0.5s ease;
 			position: relative;
-			width: calc(33.33333% - 2.5em);
+			width: calc(50% - 2.5em);
 			margin: 2.5em 0 0 2.5em;
 		}
+
+		.ReactModal__Body--open .tiles article {
+			z-index: 0;
+		}
+			.tiles article p {
+				margin: 0;
+			}
 
 			.tiles article > .image {
 				-moz-transition: -moz-transform 0.5s ease;
@@ -2794,7 +2801,7 @@
 			}
 
 				.tiles article {
-					width: calc(33.33333% - 1.25em);
+					width: calc(50% - 1.25em);
 					margin: 1.25em 0 0 1.25em;
 				}
 
@@ -3348,3 +3355,17 @@
 			}
 
 		}
+
+
+/* Modal */
+.ReactModal__Content img {
+	width: 100%;
+}
+
+.ReactModal__Content h2, .ReactModal__Content p {
+	margin: 0;
+}
+
+.ReactModal__Content .projectImage {
+	margin: 1em 0;
+}
