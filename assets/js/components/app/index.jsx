@@ -27,7 +27,6 @@ class App extends Component {
 
     onProjectClick(e, projectId) {
         e.preventDefault()
-        console.log(projectId)
         const project = this.props.store.getProject(projectId)
 
         if (!!project) {
