@@ -22,6 +22,24 @@ defmodule BuiltWithElixir.Projects do
   end
 
   @doc """
+  Returns the list of posts given an `offset` and optional `limit`
+
+  ## Examples
+
+      iex> list_posts()
+      [%Post{}, ...]
+
+  """
+  def list_posts(offset, limit \\ 10) do
+    from(
+      p in Post,
+      limit: ^limit,
+      offset: ^offset
+    )
+    |> Repo.all()
+  end
+
+  @doc """
   Gets a single post.
 
   Raises `Ecto.NoResultsError` if the Post does not exist.

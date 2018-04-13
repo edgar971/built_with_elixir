@@ -6,9 +6,33 @@ defmodule BuiltWithElixir.ProjectsTest do
   describe "posts" do
     alias BuiltWithElixir.Projects.Post
 
-    @valid_attrs %{author: "some author", description: "some description", github_url: "some github_url", title: "some title", type: "some type", website_url: "some website_url", image_url: "some image_url"}
-    @update_attrs %{author: "some updated author", description: "some updated description", github_url: "some updated github_url", title: "some updated title", type: "some updated type", website_url: "some updated website_url", image_url: "some updated image_url"}
-    @invalid_attrs %{author: nil, description: nil, github_url: nil, title: nil, type: nil, website_url: nil, image_url: nil}
+    @valid_attrs %{
+      author: "some author",
+      description: "some description",
+      github_url: "some github_url",
+      title: "some title",
+      type: "some type",
+      website_url: "some website_url",
+      image_url: "some image_url"
+    }
+    @update_attrs %{
+      author: "some updated author",
+      description: "some updated description",
+      github_url: "some updated github_url",
+      title: "some updated title",
+      type: "some updated type",
+      website_url: "some updated website_url",
+      image_url: "some updated image_url"
+    }
+    @invalid_attrs %{
+      author: nil,
+      description: nil,
+      github_url: nil,
+      title: nil,
+      type: nil,
+      website_url: nil,
+      image_url: nil
+    }
 
     def post_fixture(attrs \\ %{}) do
       {:ok, post} =
@@ -22,6 +46,16 @@ defmodule BuiltWithElixir.ProjectsTest do
     test "list_posts/0 returns all posts" do
       post = post_fixture()
       assert Projects.list_posts() == [post]
+    end
+
+    test "list_posts/2 returns the requested posts with limit and offet" do
+      Enum.to_list(1..15)
+      |> Enum.each(fn _ -> post_fixture() end)
+
+      assert Enum.count(Projects.list_posts(0)) == 10
+      assert Enum.count(Projects.list_posts(0, 2)) == 2
+      assert Enum.count(Projects.list_posts(10)) == 5
+      assert Enum.count(Projects.list_posts(20)) == 0
     end
 
     test "get_post!/1 returns the post with given id" do
