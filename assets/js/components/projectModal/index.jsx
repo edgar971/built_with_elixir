@@ -9,10 +9,7 @@ const customStyles = {
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    width: '50vw',
-    height: '75vh'
+    marginRight: '-50%'
   }
 };
 
@@ -25,20 +22,27 @@ function ProjectModal({ showModal, closeModal, project }) {
       contentLabel={project.title}
     >
       <h2>{project.title}</h2>
-      <p>By: {project.author}</p>
+      <p>Created By: {project.author}</p>
       <img className='projectImage' src={project.image_url} alt={project.title} />
-      <ul>
+      <p>{project.description}</p>
+      <ul className="specs">
         <li>
-          <a href={project.website_url}>Website</a>
+          <a href={project.website_url}>
+            <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-sphere"></use></svg> Website
+          </a>
         </li>
         <li>
-          <a href={project.github_url}>Github</a>
+          <a href={project.github_url}>
+            <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-github"></use></svg> Source Code
+          </a>
         </li>
         <li>
-          <p>Type: {project.type}</p>
+          {project.type == 'project' ?
+            <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-briefcase"></use></svg>
+            : <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-wrench"></use></svg>
+          }
         </li>
       </ul>
-      <p>{project.description}</p>
     </Modal>
   )
 }

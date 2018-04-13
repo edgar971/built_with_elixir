@@ -1847,54 +1847,14 @@
 	}
 
 /* Icon */
-
-	.icon {
-		text-decoration: none;
-		border-bottom: none;
-		position: relative;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-		.icon.style2 {
-			-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-			-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-			-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-			transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-			background-color: transparent;
-			border: solid 1px #c9c9c9;
-			border-radius: 4px;
-			width: 2.65em;
-			height: 2.65em;
-			display: inline-block;
-			text-align: center;
-			line-height: 2.65em;
-			color: inherit;
-		}
-
-			.icon.style2:before {
-				font-size: 1.1em;
-			}
-
-			.icon.style2:hover {
-				color: #f2849e;
-				border-color: #f2849e;
-			}
-
-			.icon.style2:active {
-				background-color: rgba(242, 132, 158, 0.1);
-			}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
 
 /* List */
 
@@ -3358,6 +3318,12 @@
 
 
 /* Modal */
+.ReactModal__Content {
+	transform: translate(-50%, -50%);
+	width: 85vw;
+	max-width: 900px;
+	height: 80vh;
+}
 .ReactModal__Content img {
 	width: 100%;
 }
