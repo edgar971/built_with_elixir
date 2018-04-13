@@ -38,7 +38,8 @@
 			<div class="inner">
 				<section>
 					<h2>Submit a project</h2>
-					<form method="post" action="#">
+					<p>Form is in progress, for now use the following <a href="https://goo.gl/forms/M8d0rbn12O2kKplu2" target="_blank">Google form</a>. </p>
+					<%# <form method="post" action="#">
 						<div class="field half first">
 							<input type="text" name="title" id="title" placeholder="Project Title" />
 						</div>
@@ -59,7 +60,7 @@
 								<input type="submit" value="Send" class="special" />
 							</li>
 						</ul>
-					</form>
+					</form> %>
 				</section>
 				<%# <section>
 					<h2>Follow</h2>
