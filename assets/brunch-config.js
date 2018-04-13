@@ -49,7 +49,7 @@ exports.config = {
       ignore: [/vendor/],
       presets: [['env', {
         targets: {
-          browsers: ["last 4 versions"]
+          browsers: ["last 3 versions"]
         }
       }], 'react'],
       plugins: ["transform-object-rest-spread"]
