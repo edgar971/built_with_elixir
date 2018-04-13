@@ -24,7 +24,6 @@ function ProjectModal({ showModal, closeModal, project }) {
       <h2>{project.title}</h2>
       <p>Created By: {project.author}</p>
       <img className='projectImage' src={project.image_url} alt={project.title} />
-      <p>{project.description}</p>
       <ul className="specs">
         <li>
           <a href={project.website_url}>
@@ -38,11 +37,17 @@ function ProjectModal({ showModal, closeModal, project }) {
         </li>
         <li>
           {project.type == 'project' ?
-            <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-briefcase"></use></svg>
-            : <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-wrench"></use></svg>
+            <p>
+              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-briefcase"></use></svg> Project
+            </p>
+            :
+            <p>
+              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-wrench"></use></svg> Library
+            </p>
           }
         </li>
       </ul>
+      <p>{project.description}</p>
     </Modal>
   )
 }

@@ -22,7 +22,8 @@ const Project = (props) => {
                 <h2>{title}</h2>
                 <p>By: {author}</p>
                 <div className="content">
-                    <p>{description}</p>
+                    <svg className="icon icon-wrench"><use xlinkHref="/images/symbol-defs.svg#icon-eye"></use></svg>
+                    <p>View More</p>
                 </div>
             </a>
         </article>

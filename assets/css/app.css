@@ -1,1 +1,53 @@
 /* This file is for your main application css. */
+
+/* Modal */
+.ReactModal__Content {
+	transform: translate(-50%, -50%);
+	width: 85vw;
+	max-width: 850px;
+  height: 80vh;
+  max-height: 800px;
+}
+
+.tiles article .icon {
+  width: 4em;
+  height: 4em;
+}
+
+.ReactModal__Content img {
+	width: 100%;
+}
+
+.ReactModal__Content h2, .ReactModal__Content p {
+	margin: 0;
+}
+
+.ReactModal__Content .projectImage {
+  margin: 1em 0;
+  margin-bottom: 0;
+}
+
+.ReactModal__Content .specs {
+  list-style: none;
+  margin: 0;
+  margin-top: -10px;
+  padding: 0;
+  display: flex;
+  border: solid 1px #ededed;
+  border-top: none;
+  margin-bottom: 1em;
+}
+
+.ReactModal__Content .specs li {
+  flex-grow: 1;
+  text-align: center;
+  padding: .25em;
+}
+
+.ReactModal__Content .specs li:nth-of-type(2) {
+  border: solid 2px #ededed;
+  border-top: none;
+  border-bottom: none;
+}
+
+

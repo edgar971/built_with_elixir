@@ -3315,23 +3315,3 @@
 			}
 
 		}
-
-
-/* Modal */
-.ReactModal__Content {
-	transform: translate(-50%, -50%);
-	width: 85vw;
-	max-width: 900px;
-	height: 80vh;
-}
-.ReactModal__Content img {
-	width: 100%;
-}
-
-.ReactModal__Content h2, .ReactModal__Content p {
-	margin: 0;
-}
-
-.ReactModal__Content .projectImage {
-	margin: 1em 0;
-}

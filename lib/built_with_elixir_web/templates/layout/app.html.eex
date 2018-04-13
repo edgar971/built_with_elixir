@@ -61,7 +61,7 @@
 						</ul>
 					</form>
 				</section>
-				<section>
+				<%# <section>
 					<h2>Follow</h2>
 					<ul class="icons">
 						<li>
@@ -105,9 +105,11 @@
 							</a>
 						</li>
 					</ul>
-				</section>
+				</section> %>
 				<ul class="copyright">
 					<li>Created By Edgar Pino &copy; 2018</li>
+					<li>Built With Elixir, Phoenix, and React.js</li>
+					<li>Design by HTML5 UP</li>
 				</ul>
 			</div>
 		</footer>

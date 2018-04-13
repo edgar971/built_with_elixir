@@ -52,7 +52,7 @@ class App extends Component {
 
     async componentDidMount() {
         this.subscriptionId = this.props.store.subscribe(this.onStoreChange);   
-        const { data } = await fetchProjects(0, 50)
+        const { data } = await fetchProjects(0, 15)
         this.props.store.setProjects(data)
     }
 
