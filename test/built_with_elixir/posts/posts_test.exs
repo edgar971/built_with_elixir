@@ -55,7 +55,7 @@ defmodule BuiltWithElixir.ProjectsTest do
       assert Enum.count(Projects.list_posts(0)) == 10
       assert Enum.count(Projects.list_posts(0, 2)) == 2
       assert Enum.count(Projects.list_posts(10)) == 5
-      assert Enum.count(Projects.list_posts(20)) == 0
+      assert Projects.list_posts(20) == []
     end
 
     test "get_post!/1 returns the post with given id" do
