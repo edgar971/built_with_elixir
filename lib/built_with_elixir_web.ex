@@ -28,8 +28,9 @@ defmodule BuiltWithElixirWeb do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/built_with_elixir_web/templates",
-                        namespace: BuiltWithElixirWeb
+      use Phoenix.View,
+        root: "lib/built_with_elixir_web/templates",
+        namespace: BuiltWithElixirWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]

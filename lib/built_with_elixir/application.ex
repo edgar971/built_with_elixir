@@ -11,7 +11,7 @@ defmodule BuiltWithElixir.Application do
       # Start the Ecto repository
       supervisor(BuiltWithElixir.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(BuiltWithElixirWeb.Endpoint, []),
+      supervisor(BuiltWithElixirWeb.Endpoint, [])
       # Start your own worker by calling: BuiltWithElixir.Worker.start_link(arg1, arg2, arg3)
       # worker(BuiltWithElixir.Worker, [arg1, arg2, arg3]),
     ]
