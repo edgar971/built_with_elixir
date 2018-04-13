@@ -47,7 +47,12 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/vendor/],
-      presets: ['env', 'react']
+      presets: [['env', {
+        targets: {
+          browsers: ['last 2 Chrome versions']
+        }
+      }], 'react'],
+      plugins: ["transform-object-rest-spread"]
     }
   },
 
