@@ -15,7 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :built_with_elixir, BuiltWithElixirWeb.Endpoint,
   load_from_system_env: true,
-  url: [host: "arcane-anchorage-16238.herokuapp.com", port: 443],
+  url: [scheme: "https", host: "builtwithelixir.com", port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
 
