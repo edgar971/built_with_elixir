@@ -26,12 +26,12 @@ function ProjectModal({ showModal, closeModal, project }) {
       <img className='projectImage' src={project.image_url} alt={project.title} />
       <ul className="specs">
         <li>
-          <a href={project.website_url}>
+          <a target="_blank" rel="noopener noreferrer" href={project.website_url}>
             <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-sphere"></use></svg> Website
           </a>
         </li>
         <li>
-          <a href={project.github_url}>
+          <a target="_blank" rel="noopener noreferrer" href={project.github_url}>
             <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-github"></use></svg> Source Code
           </a>
         </li>

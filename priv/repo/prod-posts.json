@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Texto OCR",
+    "description": "A simple web app to extract text found in images. This project was created using Phoenix and Elixir.",
+    "author": "Edgar Pino",
+    "website_url": "https://image-to-text.edgardev.com/",
+    "github_url": "https://github.com/edgar971/image_to_text",
+    "image_url": "/images/projects/image-to-text_600x350.png",
+    "type": "project"
+  },
+  {
+    "title": "Meeseeks",
+    "description": "An Elixir library for parsing and extracting data from HTML and XML with CSS or XPath selectors.",
+    "author": "Mischov",
+    "website_url": "https://hexdocs.pm/meeseeks/Meeseeks.html",
+    "github_url": "https://github.com/mischov/meeseeks",
+    "image_url": "/images/projects/meeseeks.png",
+    "type": "library"
+  },
+  {
+    "title": "FunWithFlags",
+    "description": "FunWithFlags is an OTP application that provides a 2-level storage to save and retrieve feature flags, an Elixir API to toggle and query them, and a web dashboard as control panel. ",
+    "author": "Tommaso Pavese",
+    "website_url": "https://hexdocs.pm/fun_with_flags/FunWithFlags.html",
+    "github_url": "https://github.com/tompave/fun_with_flags",
+    "image_url": "/images/projects/fun-with-flags.png",
+    "type": "library"
+  },
+  {
+    "title": "RemoteRetro",
+    "description": "A real-time application for conducting Agile retrospectives with distributed teams.",
+    "author": "Travis Vander Hoop",
+    "website_url": "https://remoteretro.org/",
+    "github_url": "https://github.com/stride-nyc/remote_retro",
+    "image_url": "/images/projects/remote-retro.png",
+    "type": "website"
+  },
+  {
+    "title": "Credo",
+    "description": "A static code analysis tool for the Elixir language with a focus on code consistency and teaching.",
+    "author": "René Föhring",
+    "website_url": "http://credo-ci.org/",
+    "github_url": "https://github.com/rrrene/credo",
+    "image_url": "/images/projects/credo.png",
+    "type": "website"
+  }
+]

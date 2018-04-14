@@ -13,9 +13,14 @@
 
   <body>
   <!-- Wrapper -->
+	<div class="beta-banner">
+			<p>This website is still in beta, please report any issues <a href="https://github.com/edgar971/built_with_elixir/issues">here</a>.</p>
+		</div>
 	<div id="wrapper">
 		<!-- Header -->
+		
 		<header id="header">
+			
 			<div class="inner">
 
 				<!-- Logo -->

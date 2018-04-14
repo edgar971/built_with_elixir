@@ -15,7 +15,8 @@
 }
 
 .ReactModal__Content img {
-	width: 100%;
+  width: 100%;
+  border: solid 1px #ededed;
 }
 
 .ReactModal__Content h2, .ReactModal__Content p {
@@ -50,4 +51,26 @@
   border-bottom: none;
 }
 
+.ReactModal__Body--open {
+  overflow: hidden;
+}
 
+/* Beta Banner */
+.beta-banner {
+  text-align: center;
+  background: #3F1058;
+  color: #FFFFFF;
+}
+
+.beta-banner p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.beta-banner a {
+  color: #E6DEEA;
+}
+
+.beta-banner a:hover {
+  color: #FFFFFF;
+}

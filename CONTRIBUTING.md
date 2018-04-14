@@ -7,3 +7,6 @@ This site is in early stages and it could use UX/UI updates, and overall new fea
 
 ## Design improvements
 1. None so far but feel free to suggest anything. 
+
+
+Colors: https://coolors.co/3f1058-c8bfcd-ffffff-91789d-e6deea
