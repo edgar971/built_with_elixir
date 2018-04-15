@@ -54,9 +54,9 @@ defmodule BuiltWithElixir.Mixfile do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      "ecto.setup.dev": ["ecto.create", "ecto.migrate", "run priv/repo/dev-seeds.exs"],
+      "ecto.setup.dev": ["ecto.create", "ecto.migrate", "run priv/repo/dev-seed.exs"],
       "ecto.reset.dev": ["ecto.drop", "ecto.setup.dev"],
-      "ecto.setup.prod": ["ecto.create", "ecto.migrate", "run priv/repo/prod-seeds.exs"],
+      "ecto.setup.prod": ["ecto.create", "ecto.migrate", "run priv/repo/prod-seed.exs"],
       "ecto.reset.prod": ["ecto.drop", "ecto.setup.prod"],
       test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]

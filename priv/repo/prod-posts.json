@@ -43,5 +43,23 @@
     "github_url": "https://github.com/rrrene/credo",
     "image_url": "/images/projects/credo.png",
     "type": "website"
+  },
+  {
+    "title": "Pickpocket",
+    "description": "Pickpocket helps Millennials and their loved ones repay student debt by taking a percentage of their spending and using it to pay down their student loans.",
+    "author": "Will Gilman",
+    "website_url": "https://pickpocket.me",
+    "github_url": null,
+    "image_url": "/images/projects/pickpocket.png",
+    "type": "website"
+  },
+  {
+    "title": "SignDict",
+    "description": "A crowdsourced sign language dictionary.",
+    "author": "Bodo Tasche",
+    "website_url": "https://signdict.org",
+    "github_url": "https://github.com/signdict/website",
+    "image_url": "/images/projects/signdict.png",
+    "type": "website"
   }
 ]
