@@ -20,6 +20,7 @@
 }
 
 .ReactModal__Content h2, .ReactModal__Content p {
+  letter-spacing: 0;
 	margin: 0;
 }
 
