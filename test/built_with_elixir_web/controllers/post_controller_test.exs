@@ -32,9 +32,9 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
 
     test "lists all posts", %{conn: conn} do
       conn = get(conn, post_path(conn, :index))
-      %{"id" => id} = response = hd(json_response(conn, 200)["data"])
+      response = hd(json_response(conn, 200)["data"])
 
-      assert response === Map.put(@create_attrs, "id", id)
+      assert response === Enum.into(%{"id" => response["id"], "inserted_at" => response["inserted_at"]}, @create_attrs)
     end
   end
 
@@ -68,9 +68,9 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
 
     test "single existing post", %{conn: conn, post: post} do
       conn = get(conn, post_path(conn, :show, post.id))
-      %{"id" => id} = response = json_response(conn, 200)["data"]
+      response = json_response(conn, 200)["data"]
 
-      assert response === Map.put(@create_attrs, "id", id)
+      assert response === Enum.into(%{"id" => response["id"], "inserted_at" => response["inserted_at"]}, @create_attrs)
     end
   end
 

@@ -1,20 +1,13 @@
 
 class StateAPI {
 
-  constructor({ projects }) {
+  constructor() {
     this.data = {
-      projects: this.mapIntoObject(projects)
+      projects: []
     }
 
     this.subscriptions = {}
     this.lastSubscriptionId = 0
-  }
-
-  mapIntoObject(arr) {
-    return arr.reduce((acc, curr) => {
-      acc[curr.id] = curr
-      return acc
-    }, {})
   }
 
   getProjects() {
@@ -22,7 +15,7 @@ class StateAPI {
   }
 
   getProject(projectId) {
-    return this.data.projects[projectId]
+    return this.data.projects.find((project) => project.id === projectId)
   }
 
   s4() {
@@ -55,10 +48,6 @@ class StateAPI {
   }
 
   setProjects(projects) {
-    if(Array.isArray(projects)) {
-      projects = this.mapIntoObject(projects)
-    }
-
     this.mergeWithState({
       projects
     })

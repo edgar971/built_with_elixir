@@ -19,7 +19,8 @@ defmodule BuiltWithElixirWeb.PostView do
       website_url: post.website_url,
       github_url: post.github_url,
       type: post.type,
-      image_url: post.image_url
+      image_url: post.image_url,
+      inserted_at: post.inserted_at
     }
   end
 end
