@@ -74,6 +74,22 @@ defmodule BuiltWithElixir.ProjectsTest do
       assert post.image_url == "some image_url"
     end
 
+    test "create_post/1 with valid optional data creates a post" do
+      test_post =
+        %{
+          github_url: nil,
+          website_url: nil
+        }
+        |> Enum.into(@valid_attrs)
+
+      assert {:ok, %Post{} = post} = Projects.create_post(test_post)
+      assert post.author == "some author"
+      assert post.description == "some description"
+      assert post.title == "some title"
+      assert post.type == "some type"
+      assert post.image_url == "some image_url"
+    end
+
     test "create_post/1 with invalid data returns error changeset" do
       assert {:error, %Ecto.Changeset{}} = Projects.create_post(@invalid_attrs)
     end

@@ -24,8 +24,6 @@ defmodule BuiltWithElixir.Projects.Post do
       :title,
       :description,
       :author,
-      :website_url,
-      :github_url,
       :image_url,
       :type
     ])
