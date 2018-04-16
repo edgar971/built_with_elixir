@@ -18,7 +18,11 @@ defmodule BuiltWithElixir.Projects do
 
   """
   def list_posts do
-    Repo.all(Post)
+    from(
+      p in Post,
+      order_by: [desc: :inserted_at]
+    )
+    |> Repo.all()
   end
 
   @doc """
@@ -34,7 +38,8 @@ defmodule BuiltWithElixir.Projects do
     from(
       p in Post,
       limit: ^limit,
-      offset: ^offset
+      offset: ^offset,
+      order_by: [desc: :inserted_at]
     )
     |> Repo.all()
   end

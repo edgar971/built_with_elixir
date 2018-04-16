@@ -44,18 +44,22 @@ defmodule BuiltWithElixir.ProjectsTest do
     end
 
     test "list_posts/0 returns all posts" do
-      post = post_fixture()
-      assert Projects.list_posts() == [post]
+      post_1 = post_fixture()
+      post_2 = post_fixture()
+      post_3 = post_fixture()
+
+      assert Projects.list_posts() == [post_3, post_2, post_1]
     end
 
     test "list_posts/2 returns the requested posts with limit and offet" do
-      Enum.to_list(1..15)
-      |> Enum.each(fn _ -> post_fixture() end)
+      posts = Enum.to_list(1..15)
+      |> Enum.map(fn _ -> post_fixture() end)
 
       assert Enum.count(Projects.list_posts(0)) == 10
       assert Enum.count(Projects.list_posts(0, 2)) == 2
       assert Enum.count(Projects.list_posts(10)) == 5
       assert Projects.list_posts(20) == []
+      assert Projects.list_posts(0, 20) == Enum.reverse(posts)
     end
 
     test "get_post!/1 returns the post with given id" do
