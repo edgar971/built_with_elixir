@@ -70,5 +70,32 @@
     "github_url": null,
     "image_url": "/images/projects/elixirfiddle.png",
     "type": "website"
+  },
+  {
+    "title": "Talkery",
+    "description": "Talkery is a free platform for finding and staying up to date with the newest and greatest talks in the topics you’re interested in. It allows you to filter conference talks by topics (e.g. React, Rails, Rust) as well as conferences (e.g. GOTO 2017). It also allows you to follow these topics and get notified when new talks are released.",
+    "author": "Harrison Lucas",
+    "website_url": "https://talkery.io",
+    "github_url": null,
+    "image_url": "/images/projects/talkery.png",
+    "type": "website"
+  },
+  {
+    "title": "Alchemist Camp",
+    "author": "Alchemist Camp",
+    "description": "Alchemist Camp is a resource with several dozen free screencasts for learning Elixir and Phoenix. It's mostly longer-form, project based episodes.",
+    "website_url": "https://alchemist.camp  ",
+    "github_url": null,
+    "image_url": "/images/projects/alchemist.png",
+    "type": "website"
+  },
+  {
+    "title": "StatWatch",
+    "author": "Alchemist Camp",
+    "description": "StatWatch is a simple stat-tracking app that will record how many twitter followers, YouTube subscribers, YouTube views you have as well as the Alexa Rank of your site.",
+    "website_url": "https://statwatch.me",
+    "github_url": null,
+    "image_url": "/images/projects/statwatch.png",
+    "type": "website"
   }
 ]
