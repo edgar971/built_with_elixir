@@ -54,12 +54,21 @@
     "type": "website"
   },
   {
-    "title": "SignDict",
-    "description": "A crowdsourced sign language dictionary.",
-    "author": "Bodo Tasche",
-    "website_url": "https://signdict.org",
-    "github_url": "https://github.com/signdict/website",
-    "image_url": "/images/projects/signdict.png",
+    "title": "Sprint Poker",
+    "description": "Easiest tool for your team's regular weekly sprint planning sessions.",
+    "author": "Michał Kalbarczyk",
+    "website_url": "https://sprintpoker.io/",
+    "github_url": "https://github.com/elpassion/sprint-poker",
+    "image_url": "/images/projects/sprintpoker.png",
+    "type": "website"
+  },
+  {
+    "title": "ElixirFiddle",
+    "description": "Experiment and share Elixir code with others!",
+    "author": "KickinEspresso",
+    "website_url": "https://elixirfiddle.com/",
+    "github_url": null,
+    "image_url": "/images/projects/elixirfiddle.png",
     "type": "website"
   }
 ]
