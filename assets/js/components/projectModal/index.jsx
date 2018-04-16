@@ -25,16 +25,20 @@ function ProjectModal({ showModal, closeModal, project }) {
       <p>Created By: {project.author}</p>
       <img className='projectImage' src={project.image_url} alt={project.title} />
       <ul className="specs">
-        <li>
-          <a target="_blank" rel="noopener noreferrer" href={project.website_url}>
-            <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-sphere"></use></svg> Website
+        {project.website_url &&
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href={project.website_url}>
+              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-sphere"></use></svg> Website
           </a>
-        </li>
-        <li>
-          <a target="_blank" rel="noopener noreferrer" href={project.github_url}>
-            <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-github"></use></svg> Source Code
+          </li>
+        }
+        {project.github_url &&
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href={project.github_url}>
+              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-github"></use></svg> Source Code
           </a>
-        </li>
+          </li>
+        }
         <li>
           {project.type == 'project' ?
             <p>
