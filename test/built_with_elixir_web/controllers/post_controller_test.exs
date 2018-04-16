@@ -34,7 +34,11 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
       conn = get(conn, post_path(conn, :index))
       response = hd(json_response(conn, 200)["data"])
 
-      assert response === Enum.into(%{"id" => response["id"], "inserted_at" => response["inserted_at"]}, @create_attrs)
+      assert response ===
+               Enum.into(
+                 %{"id" => response["id"], "inserted_at" => response["inserted_at"]},
+                 @create_attrs
+               )
     end
   end
 
@@ -70,7 +74,11 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
       conn = get(conn, post_path(conn, :show, post.id))
       response = json_response(conn, 200)["data"]
 
-      assert response === Enum.into(%{"id" => response["id"], "inserted_at" => response["inserted_at"]}, @create_attrs)
+      assert response ===
+               Enum.into(
+                 %{"id" => response["id"], "inserted_at" => response["inserted_at"]},
+                 @create_attrs
+               )
     end
   end
 
