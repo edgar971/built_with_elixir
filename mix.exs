@@ -42,7 +42,8 @@ defmodule BuiltWithElixir.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:json, "~> 1.0"},
-      {:credo, "~> 0.9.1"}
+      {:credo, "~> 0.9.1"},
+      {:mix_test_watch, "~> 0.6.0", only: :dev}
     ]
   end
 
