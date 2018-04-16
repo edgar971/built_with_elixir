@@ -8,7 +8,8 @@ defmodule BuiltWithElixir.ProjectsTest do
 
     @valid_attrs %{
       author: "some author",
-      description: "some description",
+      description:
+        "some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description some description",
       github_url: "some github_url",
       title: "some title",
       type: "some type",
@@ -52,8 +53,9 @@ defmodule BuiltWithElixir.ProjectsTest do
     end
 
     test "list_posts/2 returns the requested posts with limit and offet" do
-      posts = Enum.to_list(1..15)
-      |> Enum.map(fn _ -> post_fixture() end)
+      posts =
+        Enum.to_list(1..15)
+        |> Enum.map(fn _ -> post_fixture() end)
 
       assert Enum.count(Projects.list_posts(0)) == 10
       assert Enum.count(Projects.list_posts(0, 2)) == 2
@@ -70,7 +72,7 @@ defmodule BuiltWithElixir.ProjectsTest do
     test "create_post/1 with valid data creates a post" do
       assert {:ok, %Post{} = post} = Projects.create_post(@valid_attrs)
       assert post.author == "some author"
-      assert post.description == "some description"
+      assert post.description == @valid_attrs.description
       assert post.github_url == "some github_url"
       assert post.title == "some title"
       assert post.type == "some type"
@@ -88,7 +90,7 @@ defmodule BuiltWithElixir.ProjectsTest do
 
       assert {:ok, %Post{} = post} = Projects.create_post(test_post)
       assert post.author == "some author"
-      assert post.description == "some description"
+      assert post.description == @valid_attrs.description
       assert post.title == "some title"
       assert post.type == "some type"
       assert post.image_url == "some image_url"
