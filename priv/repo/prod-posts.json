@@ -6,7 +6,7 @@
     "website_url": "https://image-to-text.edgardev.com/",
     "github_url": "https://github.com/edgar971/image_to_text",
     "image_url": "/images/projects/image-to-text_600x350.png",
-    "type": "project"
+    "type": "website"
   },
   {
     "title": "Meeseeks",
@@ -96,6 +96,51 @@
     "website_url": "https://statwatch.me",
     "github_url": null,
     "image_url": "/images/projects/statwatch.png",
+    "type": "website"
+  },
+  {
+    "title": "Compost Connect",
+    "author": "jnmandal",
+    "description": "Marketplace for composting",
+    "website_url": "https://www.compost-connect.com",
+    "github_url": null,
+    "image_url": "/images/projects/compost-connect.png",
+    "type": "website"
+  },
+  {
+    "title": "Code::Stats",
+    "author": "Nicd",
+    "description": "Free stats tracking service for programmers.",
+    "website_url": "https://codestats.net/",
+    "github_url": "https://gitlab.com/code-stats/code-stats",
+    "image_url": "/images/projects/codestats.png",
+    "type": "website"
+  },
+  {
+    "title": "Almost Dead .net",
+    "author": "alxndr",
+    "description": "Still a work in progress... Keeping track of setlists played by the band Joe Russo's Almost Dead.",
+    "website_url": "http://almost-dead.net",
+    "github_url": null,
+    "image_url": "/images/projects/almost-dead.png",
+    "type": "website"
+  },
+  {
+    "title": "Fryse",
+    "author": "Phillipp Ohlandt",
+    "description": "A Static Site Generator which aims to be generic and scriptable",
+    "website_url": null,
+    "github_url": "https://github.com/fryse/fryse",
+    "image_url": "/images/projects/fryse.png",
+    "type": "library"
+  },
+  {
+    "title": "Crypto Coin Prices",
+    "author": "Marcos B. L.",
+    "description": "Crypto Coin Prices provide tools, prices and tickers comparison directly from exchanges!",
+    "website_url": "https://cryptocoinprices.io/",
+    "github_url": null,
+    "image_url": "/images/projects/cryptocoinprices.png",
     "type": "website"
   }
 ]

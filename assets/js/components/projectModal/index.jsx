@@ -29,21 +29,21 @@ function ProjectModal({ showModal, closeModal, project }) {
         {project.website_url &&
           <li>
             <a target="_blank" rel="noopener noreferrer" href={project.website_url}>
-              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-sphere"></use></svg> Website
+              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-sphere"></use></svg> Visit Website
           </a>
           </li>
         }
         {project.github_url &&
           <li>
             <a target="_blank" rel="noopener noreferrer" href={project.github_url}>
-              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-github"></use></svg> Source Code
+              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-github"></use></svg> View Source Code
           </a>
           </li>
         }
         <li>
-          {project.type == 'project' ?
+          {project.type == 'website' ?
             <p>
-              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-briefcase"></use></svg> Project
+              <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-briefcase"></use></svg> Website
             </p>
             :
             <p>
