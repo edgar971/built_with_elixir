@@ -2822,6 +2822,11 @@
 			text-transform: uppercase;
 			display: inline-block;
 		}
+		#header .logo .title {
+			margin: 0;
+			font-size: inherit;
+			letter-spacing: 0;
+		}
 
 			#header .logo > * {
 				display: inline-block;

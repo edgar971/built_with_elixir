@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A collection of projects built with Elixir">
+    <meta name="description" content="A collection of projects built with Elixir.">
     <meta name="author" content="Edgar Pino">
 
-  	<title>Built With Elixir - A collection of projects built with Elixir</title>
+  	<title>Built With Elixir - A collection of projects built with Elixir.</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -28,7 +28,7 @@
 					<span class="symbol">
 						<img src="/images/logo.svg" alt="" />
 					</span>
-					<span class="title">Built With Elixir</span>
+					<h1 class="title">Built With Elixir</h1>
 				</a>
 			</div>
 		</header>

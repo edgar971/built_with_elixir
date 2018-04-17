@@ -14,11 +14,11 @@ const Project = (props) => {
         onClick } = props
 
     return (
-        <article className="style1" onClick={(e) => onClick(e, id)} >
+        <article className="style1" title={`${title} created by ${author}`} onClick={(e) => onClick(e, id)} >
             <span className="image">
                 <img src={image_url} alt={description} />
             </span>
-            <a href="#">
+            <a href={`#${id}`}>
                 <h2>{title}</h2>
                 <p>By: {author}</p>
                 <div className="content">
