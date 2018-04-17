@@ -5,6 +5,6 @@ defmodule BuiltWithElixirWeb.PageControllerTest do
     conn = get(conn, "/")
 
     assert html_response(conn, 200) =~
-             "Built With Elixir - A collection of projects built with Elixir"
+             "Built With Elixir - A place to discover projects built with Elixir."
   end
 end

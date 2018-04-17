@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A collection of projects built with Elixir.">
+    <meta name="description" content="A place to discover projects built with Elixir.">
     <meta name="author" content="Edgar Pino">
-
-  	<title>Built With Elixir - A collection of projects built with Elixir.</title>
+		<meta property=”og:url” content=”https://builtwithelixir.com” />
+		<meta property=”og:type” content=”website” />
+		<meta property=”og:description” content="Built With Elixir - A place to discover projects built with Elixir." />
+		<meta property=”og:image” content=”<%= static_path(@conn, "/images/build-with-elixir-og.png") %>” />
+		
+  	<title>Built With Elixir - A place to discover projects built with Elixir.</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
