@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A place to discover projects built with Elixir.">
-    <meta name="author" content="Edgar Pino">
-		<meta property=”og:url” content=”https://builtwithelixir.com” />
-		<meta property=”og:type” content=”website” />
-		<meta property=”og:description” content="Find projects created by the community that are built with Elixir. Get inspired, create your own, and submit your awesome project!" />
-		<meta property=”og:image” content="https://builtwithelixir.com<%= static_path(@conn, "/images/build-with-elixir-og.png") %>" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A place to discover projects built with Elixir." />
+    <meta name="author" content="Edgar Pino" />
+		<meta property="og:url" content="https://builtwithelixir.com" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Find projects created by the community that are built with Elixir. Get inspired, create your own, and submit your awesome project!" />
+		<meta property="og:image" content="https://builtwithelixir.com<%= static_path(@conn, "/images/build-with-elixir-og.png") %>" />
 		
   	<title>Built With Elixir - A place to discover projects built with Elixir.</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
