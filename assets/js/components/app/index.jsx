@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProjectsList from '../projectsList'
 import ProjectModal from '../projectModal'
 import { fetchProjects } from '../../api'
+import GA from '../../ga'
 
 class App extends Component {
 
@@ -31,8 +32,20 @@ class App extends Component {
 
         if (!!project) {
             this.setState({ selectedProject: project })
+            console.log(project)
             this.openModal()
+            GA.modalview(`/${this.slugify(project.title)}/${projectId}`);
         }
+
+    }
+
+    slugify(text) {
+        return text.toString().toLowerCase()
+            .replace(/\s+/g, '-')           // Replace spaces with -
+            .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+            .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+            .replace(/^-+/, '')             // Trim - from start of text
+            .replace(/-+$/, '');            // Trim - from end of text
     }
 
     closeModal() {
@@ -50,7 +63,7 @@ class App extends Component {
     }
 
     async componentDidMount() {
-        this.subscriptionId = this.props.store.subscribe(this.onStoreChange);   
+        this.subscriptionId = this.props.store.subscribe(this.onStoreChange);
         const { data } = await fetchProjects(0, 15)
         this.props.store.setProjects(data)
     }

@@ -13,6 +13,9 @@
 		
   	<title>Built With Elixir - A place to discover projects built with Elixir.</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+		<script>
+			window.config = <%= raw elem(JSON.encode(Application.get_env(:built_with_elixir, :web)),1) %>
+		</script>
   </head>
 
   <body>
