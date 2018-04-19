@@ -48,7 +48,7 @@
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="inner">
-				<section>
+				<section id="submit">
 					<h2>Submit a project</h2>
 					<p>Form is in progress, for now use the following <a href="https://goo.gl/forms/M8d0rbn12O2kKplu2" target="_blank">Google form</a>. </p>
 					<%# <form method="post" action="#">

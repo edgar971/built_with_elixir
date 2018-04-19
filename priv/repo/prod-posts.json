@@ -169,5 +169,41 @@
     "github_url": null,
     "image_url": "/images/projects/cookingwithlink.png",
     "type": "website"
+  },
+  {
+    "title": "ChatBroom",
+    "author": "Geoffrey Lessel",
+    "description": "A highly-temporal chat room service with no database and no memory of the past.",
+    "website_url": "https://chatbroom.com",
+    "github_url": null,
+    "image_url": "/images/projects/chatbroom.png",
+    "type": "website"
+  },
+  {
+    "title": "Smileys Pub",
+    "author": "Tyler Pierce",
+    "description": "Reddit-clone for-fun learning project.",
+    "website_url": "https://smileys.pub",
+    "github_url": "https://github.com/smileys-tavern/smileys_umbrella",
+    "image_url": "/images/projects/smileys.jpg",
+    "type": "website"
+  },
+  {
+    "title": "Verk",
+    "author": "Eduardo Gurgel",
+    "description": "Job processing system backed by Redis.",
+    "website_url": null,
+    "github_url": "https://github.com/edgurgel/verk",
+    "image_url": "/images/projects/verk.jpg",
+    "type": "library"
+  },
+  {
+    "title": "ExVenture",
+    "author": "Eric Oestrich",
+    "description": "A MUD (Multi-User Dungeon) server.",
+    "website_url": "https://exventure.org",
+    "github_url": "https://github.com/oestrich/ex_venture",
+    "image_url": "/images/projects/ex_venture.png",
+    "type": "website"
   }
 ]

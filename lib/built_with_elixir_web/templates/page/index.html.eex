@@ -3,7 +3,7 @@
 		<h1>A place to discover projects built with
 			<br /> Elixir.
 		</h1>
-		<p>Elixir is an awesome dynamic, functional language designed for building scalable and maintainable applications.</p>
+		<p>Elixir is an awesome dynamic, functional language designed for building scalable and maintainable applications. <a href="https://docs.google.com/forms/d/e/1FAIpQLSeR96H2zTfeSKzi_jjua9oi7i_Pd0D2wCMbMq2-gfrF3o9GDA/viewform" target="_blank" rel="noopener noreferrer">Submit your project now!</a></p>
 	</header>
 	<div id="app-root"></div>
 </div>
