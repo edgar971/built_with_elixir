@@ -194,7 +194,7 @@
     "description": "Job processing system backed by Redis.",
     "website_url": null,
     "github_url": "https://github.com/edgurgel/verk",
-    "image_url": "/images/projects/verk.jpg",
+    "image_url": "/images/projects/verk.png",
     "type": "library"
   },
   {
