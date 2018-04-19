@@ -142,5 +142,32 @@
     "github_url": null,
     "image_url": "/images/projects/cryptocoinprices.png",
     "type": "website"
+  },
+  {
+    "title": "Magnetissimo",
+    "author": "Sergio Tapia",
+    "description": "Scrapes torrent sites and serves results.",
+    "website_url": null,
+    "github_url": "https://github.com/sergiotapia/magnetissimo",
+    "image_url": "/images/projects/magnetissimo.png",
+    "type": "website"
+  },
+  {
+    "title": "ElixirCasts",
+    "author": "Alekx",
+    "description": "Elixir and Phoenix Screencasts.",
+    "website_url": "https://elixircasts.io",
+    "github_url": null,
+    "image_url": "/images/projects/elixircasts.png",
+    "type": "website"
+  },
+  {
+    "title": "Cooking With Link",
+    "author": "Geoffrey Lessel",
+    "description": "Search for and filter Zelda: Breath of the Wild cooking recipes.",
+    "website_url": "http://cookingwithlink.com",
+    "github_url": null,
+    "image_url": "/images/projects/elixircasts.png",
+    "type": "website"
   }
 ]

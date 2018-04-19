@@ -28,14 +28,14 @@ function ProjectModal({ showModal, closeModal, project }) {
       <ul className="specs">
         {project.website_url &&
           <li>
-            <a target="_blank" rel="noopener noreferrer" href={project.website_url}>
+            <a target="_blank" rel="noopener noreferrer" href={`${project.website_url}?utm_source=builtwithelixir&utm_medium=website&utm_campaign=modal_click`}>
               <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-sphere"></use></svg> Visit Website
           </a>
           </li>
         }
         {project.github_url &&
           <li>
-            <a target="_blank" rel="noopener noreferrer" href={project.github_url}>
+            <a target="_blank" rel="noopener noreferrer" href={`${project.github_url}?utm_source=builtwithelixir&utm_medium=website&utm_campaign=modal_click`}>
               <svg className="icon icon-user"><use xlinkHref="/images/symbol-defs.svg#icon-github"></use></svg> View Source Code
           </a>
           </li>
