@@ -1,4 +1,4 @@
-# Built With Elixir
+# Built With Elixir [![Build Status](https://travis-ci.org/edgar971/built_with_elixir.svg?branch=master)](https://travis-ci.org/edgar971/built_with_elixir)
 This website is to showcase projects and libraries built with Elixir. Please submit a pull request to add your projects, I'm working on the form to submit via the site. Also, if you have any suggestions or feature request please submit a pull request. 
 
 ## Contributing
