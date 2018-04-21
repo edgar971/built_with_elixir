@@ -18,7 +18,7 @@ defmodule BuiltWithElixirWeb.PostController do
     render(conn, "index.json", posts: posts)
   end
 
-  def create(conn, %{"post" => post_params}) do
+  def create(conn, post_params) do
     with {:ok, %Post{} = post} <- Projects.create_post(post_params) do
       conn
       |> put_status(:created)
