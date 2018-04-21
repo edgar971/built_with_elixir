@@ -14,7 +14,9 @@ defmodule BuiltWithElixir.ProjectsTest do
       title: "some title",
       type: "some type",
       website_url: "some website_url",
-      image_url: "some image_url"
+      image_url: "some image_url",
+      published: false,
+      author_email: "something@me.com"
     }
     @update_attrs %{
       author: "some updated author",
@@ -23,7 +25,9 @@ defmodule BuiltWithElixir.ProjectsTest do
       title: "some updated title",
       type: "some updated type",
       website_url: "some updated website_url",
-      image_url: "some updated image_url"
+      image_url: "some updated image_url",
+      published: true,
+      author_email: "something@updated.com"
     }
     @invalid_attrs %{
       author: nil,
@@ -32,7 +36,9 @@ defmodule BuiltWithElixir.ProjectsTest do
       title: nil,
       type: nil,
       website_url: nil,
-      image_url: nil
+      image_url: nil,
+      published: false,
+      author_email: nil
     }
 
     def post_fixture(attrs \\ %{}) do
@@ -78,13 +84,16 @@ defmodule BuiltWithElixir.ProjectsTest do
       assert post.type == "some type"
       assert post.website_url == "some website_url"
       assert post.image_url == "some image_url"
+      assert post.author_email == "something@me.com"
+      assert post.published == false
     end
 
     test "create_post/1 with valid optional data creates a post" do
       test_post =
         %{
           github_url: nil,
-          website_url: nil
+          website_url: nil,
+          author_email: nil
         }
         |> Enum.into(@valid_attrs)
 
@@ -94,6 +103,7 @@ defmodule BuiltWithElixir.ProjectsTest do
       assert post.title == "some title"
       assert post.type == "some type"
       assert post.image_url == "some image_url"
+      assert post.published == false
     end
 
     test "create_post/1 with invalid data returns error changeset" do
@@ -111,6 +121,8 @@ defmodule BuiltWithElixir.ProjectsTest do
       assert post.type == "some updated type"
       assert post.website_url == "some updated website_url"
       assert post.image_url == "some updated image_url"
+      assert post.published == true
+      assert post.author_email == "something@updated.com"
     end
 
     test "update_post/2 with invalid data returns error changeset" do
