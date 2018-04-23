@@ -205,5 +205,41 @@
     "github_url": "https://github.com/oestrich/ex_venture",
     "image_url": "/images/projects/ex_venture.png",
     "type": "website"
+  },
+  {
+    "title": "Oopsie",
+    "author": "Coletiv Studio",
+    "description": "Oopsie is a hassle-free, online ordering platform that connects neighbouring restaurants and diners.",
+    "website_url": "https://www.oopsie.hk",
+    "github_url": null,
+    "image_url": "/images/projects/oopsie.png",
+    "type": "website"
+  },
+  {
+    "title": "Syndicate App",
+    "author": "Jon L",
+    "description": "A tool to automate email arrival to your inbox. It acts as an intermediary between your actual inbox and anything that sends email. You can think of it as a mask for you personal email with a bit of automation on top.",
+    "website_url": "https://syndicateapp.site",
+    "github_url": null,
+    "image_url": "/images/projects/syndicateapp.png",
+    "type": "website"
+  },
+  {
+    "title": "GitMonitor",
+    "author": "AlexW",
+    "description": "Custom alerts for your Github repositories.",
+    "website_url": "https://gitmonitor.com/",
+    "github_url": null,
+    "image_url": "/images/projects/gitmonitor.png",
+    "type": "website"
+  },
+  {
+    "title": "Twitter Emoji Map",
+    "author": "Twitter Emoji Map",
+    "description": "Twitter Emoji Map built with Elixir's GenStage and Angular. A simple map that shows all geotagged tweets worldwide and in real-time that contain an emoji. It is really fast. Try for yourself by tweeting anything with an emoji and a location and see the tweet pop up on the map in milliseconds.",
+    "website_url": "http://emojimap.ospaarmann.com/",
+    "github_url": "https://github.com/ospaarmann/ex-emoji-map",
+    "image_url": "/images/projects/emojimap.png",
+    "type": "website"
   }
 ]

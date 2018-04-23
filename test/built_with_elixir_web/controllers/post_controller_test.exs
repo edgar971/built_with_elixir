@@ -13,6 +13,17 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
     "image_url" => "some image_url"
   }
 
+  @form_create_attrs %{
+    "author" => "some author",
+    "description" => "some description",
+    "github_url" => "some github_url",
+    "title" => "some title",
+    "type" => "some type",
+    "website_url" => "some website_url",
+    "image_url" => "some image_url",
+    "author_email" => "edgar@me.com"
+  }
+
   def fixture(:post) do
     {:ok, post} = Projects.create_post(@create_attrs)
     post
@@ -79,6 +90,20 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
                  %{"id" => response["id"], "inserted_at" => response["inserted_at"]},
                  @create_attrs
                )
+    end
+  end
+
+  describe "create" do
+    test "a single post", %{conn: conn} do
+      conn = post(conn, post_path(conn, :create, @form_create_attrs))
+      response = json_response(conn, 201)["data"]
+
+      assert response ===
+               Enum.into(
+                 %{"id" => response["id"], "inserted_at" => response["inserted_at"]},  # add the id and inserted_at 
+                 @form_create_attrs
+               )
+               |> Map.delete("author_email") # remove the author_email since it's not in the response
     end
   end
 
