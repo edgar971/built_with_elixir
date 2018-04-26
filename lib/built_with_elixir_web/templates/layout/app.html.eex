@@ -48,31 +48,8 @@
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="inner">
-				<section id="submit">
-					<h2>Submit a project</h2>
-					<p>Form is in progress, for now use the following <a href="https://goo.gl/forms/M8d0rbn12O2kKplu2" target="_blank">Google form</a>. </p>
-					<%# <form method="post" action="#">
-						<div class="field half first">
-							<input type="text" name="title" id="title" placeholder="Project Title" />
-						</div>
-						<div class="field half">
-							<input type="text" name="author" id="author" placeholder="Author Name" />
-						</div>
-           <div class="field half first">
-							<input type="url" name="website_url" id="website_url" placeholder="Website URL" />
-						</div>
-						<div class="field half">
-							<input type="url" name="github_url" id="github_url" placeholder="Github URL" />
-						</div>
-						<div class="field">
-							<textarea name="description" id="description" placeholder="Description"></textarea>
-						</div>
-						<ul class="actions">
-							<li>
-								<input type="submit" value="Send" class="special" />
-							</li>
-						</ul>
-					</form> %>
+				<section id="submit-form">
+			
 				</section>
 				<%# <section>
 					<h2>Follow</h2>
