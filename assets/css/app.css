@@ -126,3 +126,25 @@
 .file-area input[type=file]:valid + .file-dummy .default {
   display: none;
 }
+.form-errors {
+  margin-bottom: 3em;
+}
+.form-errors p {
+  margin: 0px;
+  margin-bottom: .5em;
+  color: #FF4136;
+  font-weight: bold;
+}
+.form-errors ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.form-errors li {
+  list-style: none;
+  color: #FF4136;
+  margin: 0px;
+  padding: 0px;
+  border-left: solid 2px red;
+  padding-left: 10px;
+}

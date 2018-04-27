@@ -6,5 +6,10 @@ export async function fetchProjects(offset = 0, limit = 10) {
 }
 
 export async function postProject(project) {
-  return await axios.post('/api/projects', project)
+  const formData = new FormData()
+
+  Object.entries(project)
+    .map(([key, value]) => formData.append(key, value))
+
+  return await axios.post('/api/projects', formData)
 }
