@@ -20,6 +20,16 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :cloudini,
+  name: System.get_env("CLOUDINARY_NAME"),
+  api_key: System.get_env("CLOUDINARY_KEY"),
+  api_secret: System.get_env("CLOUDINARY_SECRET"),
+  stub_requests: false
+
+config :built_with_elixir, 
+  cloudinary_base_url: "https://res.cloudinary.com/elixir"
+
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
