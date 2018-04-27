@@ -7,7 +7,7 @@ defmodule BuiltWithElixir.Utils.CloudinaryTest do
     test "generating a url successfully" do
       base = Application.get_env(:built_with_elixir, :cloudinary_base_url)
       public_id = "cool_image"
-      expected_url = "#{base}/image/upload/elixir_project_preview/#{public_id}"
+      expected_url = "#{base}/image/upload/t_elixir_project_preview/#{public_id}"
 
       assert Cloudinary.generate_image_url(public_id) == expected_url
     end
