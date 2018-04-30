@@ -2,16 +2,15 @@ import React from 'react'
 
 export const FILE_FIELD = 'image_file'
 
-
-function ProjectForm({ onChange, onSubmit, project, isValid, validateForm, errors }) {
+function ProjectForm({ onChange, onSubmit, project, isValid, validateForm, errors, submitting }) {
   return [
-    <div className="form-errors"  key="errors">
+    <div className="form-errors" key="errors">
       <ul >
         {errors.map(e => <li key={e}>{e}</li>)}
       </ul>
     </div>
     ,
-    <form method="post" onSubmit={onSubmit} key={'form'} >
+    <form method="post" className="project-form" onSubmit={onSubmit} key={'form'} >
       <div className="field half first">
         <input type="text" name="title" placeholder="Project Title" required onChange={onChange} onBlur={validateForm} disabled={!!errors.length} />
       </div>
@@ -26,7 +25,7 @@ function ProjectForm({ onChange, onSubmit, project, isValid, validateForm, error
         <input type="text" name="author" placeholder="Author Name" required onChange={onChange} onBlur={validateForm} disabled={!!errors.length} />
       </div>
       <div className="field half">
-        <input type="email" name="author_email" placeholder="Author Email (Optional)" onChange={onChange} onBlur={validateForm} disabled={!!errors.length}  />
+        <input type="email" name="author_email" placeholder="Author Email (Optional)" onChange={onChange} onBlur={validateForm} disabled={!!errors.length} />
       </div>
       <div className="field half first">
         <input type="url" name="website_url" placeholder="Website URL" onChange={onChange} disabled={!!errors.length} />
@@ -46,7 +45,10 @@ function ProjectForm({ onChange, onSubmit, project, isValid, validateForm, error
       </div>
       <ul className="actions">
         <li>
-          <input type="submit" value="Submit" className="special" onChange={onChange} disabled={!isValid || !!errors.length} />
+          <input type="submit" value={submitting ? "Submitting" : "Submit"} className="special" onChange={onChange} disabled={!isValid || !!errors.length} />
+          {
+            submitting && <img className="loading" src="/images/bars.svg" />
+          }
         </li>
       </ul>
     </form>

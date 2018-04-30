@@ -148,3 +148,10 @@
   border-left: solid 2px red;
   padding-left: 10px;
 }
+
+.project-form .loading {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45px;
+  margin-left: 1rem;
+}

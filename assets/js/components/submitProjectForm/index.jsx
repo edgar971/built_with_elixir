@@ -21,7 +21,8 @@ class SubmitProjectForm extends Component {
       project: {},
       isValid: false,
       errors: [],
-      submitted: false
+      submitted: false,
+      submitting: false
     }
 
     this.onChange = this.onChange.bind(this)
@@ -63,16 +64,20 @@ class SubmitProjectForm extends Component {
 
   async onSubmit(e) {
     e.preventDefault();
+    this.setState((state) => ({ ...state, submitting: true }))
     try {
       await postProject(this.state.project)
-      this.setState((state) => ({ ...state, submitted: true }))
+      this.setState((state) => ({ ...state, submitted: true, submitting: false }))
+
     } catch (error) {
       const { errors } = this.state
       errors.push('An error occured while attempting to submit your project. Please try again.')
+
       this.setState((state) => {
         return {
           ...state,
-          errors
+          errors,
+          submitting: false
         }
       })
     }
@@ -91,6 +96,7 @@ class SubmitProjectForm extends Component {
               project={this.state.project}
               validateForm={this.validateForm}
               errors={this.state.errors}
+              submitting={this.state.submitting}
             />
           </div>
           :
