@@ -23,3 +23,7 @@ config :cloudini,
   api_key: "2222",
   api_secret: "2222",
   stub_requests: true
+
+
+# Stubs
+config :built_with_elixir, :cloudini, CloudiniStub

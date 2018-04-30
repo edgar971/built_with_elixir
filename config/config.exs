@@ -26,9 +26,9 @@ config :cloudini,
   api_secret: System.get_env("CLOUDINARY_SECRET"),
   stub_requests: false
 
-config :built_with_elixir, 
-  cloudinary_base_url: "https://res.cloudinary.com/elixir"
+config :built_with_elixir, cloudinary_base_url: "https://res.cloudinary.com/elixir"
 
+config :built_with_elixir, :cloudini, Cloudini
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
