@@ -2,7 +2,7 @@ defmodule BuiltWithElixir.Utils.CloudinaryTest do
   use ExUnit.Case
 
   alias BuiltWithElixir.Utils.Cloudinary
-  
+
   describe "generate_image_url" do
     test "generating a url successfully" do
       base = Application.get_env(:built_with_elixir, :cloudinary_base_url)
@@ -21,5 +21,4 @@ defmodule BuiltWithElixir.Utils.CloudinaryTest do
       assert Cloudinary.generate_image_url(public_id, transformation) == expected_url
     end
   end
-
 end

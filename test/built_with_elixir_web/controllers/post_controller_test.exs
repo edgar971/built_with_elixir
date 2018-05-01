@@ -40,13 +40,21 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
   }
 
   def fixture(:post) do
-    {:ok, post} = Projects.create_post(@create_attrs)
+    {:ok, post} =
+      %{"published" => true}
+      |> Enum.into(@create_attrs)
+      |> Projects.create_post()
+
     post
   end
 
   def fixture(:multiple_posts) do
     Enum.to_list(1..15)
-    |> Enum.map(fn _ -> Projects.create_post(@create_attrs) end)
+    |> Enum.map(fn _ ->
+      %{"published" => true}
+      |> Enum.into(@create_attrs)
+      |> Projects.create_post()
+    end)
   end
 
   setup %{conn: conn} do

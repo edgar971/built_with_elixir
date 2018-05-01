@@ -1,6 +1,6 @@
 defmodule CloudiniStub do
   require Logger
-  
+
   def upload_image(_, path, opts \\ []) do
     public_id = Keyword.get(opts, :public_id, "example_pic")
 

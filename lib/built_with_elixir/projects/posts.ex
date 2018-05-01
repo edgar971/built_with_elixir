@@ -18,10 +18,7 @@ defmodule BuiltWithElixir.Projects do
 
   """
   def list_posts do
-    from(
-      p in Post,
-      order_by: [desc: :inserted_at]
-    )
+    default_post_query()
     |> Repo.all()
   end
 
@@ -35,11 +32,12 @@ defmodule BuiltWithElixir.Projects do
 
   """
   def list_posts(offset, limit \\ 10) do
+    query = default_post_query()
+
     from(
-      p in Post,
+      p in query,
       limit: ^limit,
-      offset: ^offset,
-      order_by: [desc: :inserted_at]
+      offset: ^offset
     )
     |> Repo.all()
   end
@@ -123,5 +121,13 @@ defmodule BuiltWithElixir.Projects do
   """
   def change_post(%Post{} = post) do
     Post.changeset(post, %{})
+  end
+
+  defp default_post_query() do
+    from(
+      p in Post,
+      where: p.published == true,
+      order_by: [desc: :inserted_at]
+    )
   end
 end
