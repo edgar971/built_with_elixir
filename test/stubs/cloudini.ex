@@ -1,4 +1,6 @@
 defmodule CloudiniStub do
+  @moduledoc false
+  
   require Logger
 
   def upload_image(_, path, opts \\ []) do
