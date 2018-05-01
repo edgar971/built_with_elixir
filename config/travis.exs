@@ -17,3 +17,12 @@ config :built_with_elixir, BuiltWithElixir.Repo,
   database: "built_with_elixir_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+config :cloudini,
+  name: "wadfdfd",
+  api_key: "2222",
+  api_secret: "2222",
+  stub_requests: true
+
+# Stubs
+config :built_with_elixir, :cloudini, CloudiniStub
