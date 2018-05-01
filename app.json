@@ -1,0 +1,41 @@
+{
+  "name": "built_with_elixir",
+  "scripts": {
+  },
+  "env": {
+    "CLOUDINARY_KEY": {
+      "required": true
+    },
+    "CLOUDINARY_NAME": {
+      "required": true
+    },
+    "CLOUDINARY_SECRET": {
+      "required": true
+    },
+    "GOOGLE_ANALYTICS_KEY": {
+      "required": true
+    },
+    "POOL_SIZE": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/HashNuke/heroku-buildpack-elixir.git"
+    },
+    {
+      "url": "https://github.com/gjaldon/heroku-buildpack-phoenix-static.git"
+    }
+  ]
+}
