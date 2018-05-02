@@ -30,7 +30,7 @@ defmodule BuiltWithElixirWeb.PostController do
       image_url = Cloudinary.generate_image_url(public_id)
 
       post_params =
-        Enum.into(%{"image_url" => image_url}, post_params) |> Map.delete("image_file")
+        %{"image_url" => image_url} |> Enum.into(post_params) |> Map.delete("image_file")
 
       conn
       |> create(post_params)

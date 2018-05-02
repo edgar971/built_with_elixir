@@ -70,7 +70,8 @@ defmodule BuiltWithElixir.ProjectsTest do
 
     test "list_posts/2 returns the requested published posts with limit and offet" do
       posts =
-        Enum.to_list(1..15)
+        1..15
+        |> Enum.to_list()
         |> Enum.map(fn _ -> post_fixture(%{published: true}) end)
 
       assert Enum.count(Projects.list_posts(0)) == 10

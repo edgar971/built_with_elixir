@@ -49,7 +49,8 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
   end
 
   def fixture(:multiple_posts) do
-    Enum.to_list(1..15)
+    1..15
+    |> Enum.to_list()
     |> Enum.map(fn _ ->
       %{"published" => true}
       |> Enum.into(@create_attrs)
@@ -121,12 +122,10 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
       conn = post(conn, post_path(conn, :create, @form_create_attrs))
       response = json_response(conn, 201)["data"]
 
+      # add the id and inserted_at 
       assert response ===
-               Enum.into(
-                 # add the id and inserted_at 
-                 %{"id" => response["id"], "inserted_at" => response["inserted_at"]},
-                 @form_create_attrs
-               )
+               %{"id" => response["id"], "inserted_at" => response["inserted_at"]}
+               |> Enum.into(@form_create_attrs)
                # remove the author_email since it's not in the response
                |> Map.delete("author_email")
     end
@@ -136,15 +135,12 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
       response = json_response(conn, 201)["data"]
 
       assert response ===
-               Enum.into(
-                 # add the id and inserted_at 
-                 %{
-                   "id" => response["id"],
-                   "inserted_at" => response["inserted_at"],
-                   "image_url" => response["image_url"]
-                 },
-                 @form_create_attrs_with_file
-               )
+               %{
+                 "id" => response["id"],
+                 "inserted_at" => response["inserted_at"],
+                 "image_url" => response["image_url"]
+               }
+               |> Enum.into(@form_create_attrs_with_file)
                # remove the author_email since it's not in the response
                |> Map.delete("author_email")
                |> Map.delete("image_file")
