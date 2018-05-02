@@ -32,7 +32,6 @@ class App extends Component {
 
         if (!!project) {
             this.setState({ selectedProject: project })
-            console.log(project)
             this.openModal()
             GA.modalview(`/${this.slugify(project.title)}/${projectId}`);
         }
