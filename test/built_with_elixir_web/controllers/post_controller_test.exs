@@ -24,14 +24,37 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
     "author_email" => "edgar@me.com"
   }
 
+  @form_create_attrs_with_file %{
+    "author" => "some author",
+    "description" => "some description",
+    "github_url" => "some github_url",
+    "title" => "some title",
+    "type" => "some type",
+    "website_url" => "some website_url",
+    "image_file" => %Plug.Upload{
+      content_type: "image/png",
+      path: "test/assets/no-text.png",
+      filename: "no-text.png"
+    },
+    "author_email" => "edgar@me.com"
+  }
+
   def fixture(:post) do
-    {:ok, post} = Projects.create_post(@create_attrs)
+    {:ok, post} =
+      %{"published" => true}
+      |> Enum.into(@create_attrs)
+      |> Projects.create_post()
+
     post
   end
 
   def fixture(:multiple_posts) do
     Enum.to_list(1..15)
-    |> Enum.map(fn _ -> Projects.create_post(@create_attrs) end)
+    |> Enum.map(fn _ ->
+      %{"published" => true}
+      |> Enum.into(@create_attrs)
+      |> Projects.create_post()
+    end)
   end
 
   setup %{conn: conn} do
@@ -100,10 +123,31 @@ defmodule BuiltWithElixirWeb.PostControllerTest do
 
       assert response ===
                Enum.into(
-                 %{"id" => response["id"], "inserted_at" => response["inserted_at"]},  # add the id and inserted_at 
+                 # add the id and inserted_at 
+                 %{"id" => response["id"], "inserted_at" => response["inserted_at"]},
                  @form_create_attrs
                )
-               |> Map.delete("author_email") # remove the author_email since it's not in the response
+               # remove the author_email since it's not in the response
+               |> Map.delete("author_email")
+    end
+
+    test "a single post with an image file upload", %{conn: conn} do
+      conn = post(conn, post_path(conn, :create), @form_create_attrs_with_file)
+      response = json_response(conn, 201)["data"]
+
+      assert response ===
+               Enum.into(
+                 # add the id and inserted_at 
+                 %{
+                   "id" => response["id"],
+                   "inserted_at" => response["inserted_at"],
+                   "image_url" => response["image_url"]
+                 },
+                 @form_create_attrs_with_file
+               )
+               # remove the author_email since it's not in the response
+               |> Map.delete("author_email")
+               |> Map.delete("image_file")
     end
   end
 

@@ -1,6 +1,7 @@
 {
   "name": "built_with_elixir",
   "scripts": {
+    "postdeploy": "mix ecto.migrate"
   },
   "env": {
     "CLOUDINARY_KEY": {

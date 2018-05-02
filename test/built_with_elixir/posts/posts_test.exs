@@ -50,18 +50,28 @@ defmodule BuiltWithElixir.ProjectsTest do
       post
     end
 
-    test "list_posts/0 returns all posts" do
-      post_1 = post_fixture()
-      post_2 = post_fixture()
-      post_3 = post_fixture()
+    test "list_posts/0 returns all published posts" do
+      post_1 = post_fixture(%{published: true})
+      post_2 = post_fixture(%{published: true})
+      post_3 = post_fixture(%{published: true})
+      post_fixture(%{published: false})
 
       assert Projects.list_posts() == [post_3, post_2, post_1]
     end
 
-    test "list_posts/2 returns the requested posts with limit and offet" do
+    test "list_posts/0 returns all unpublished posts" do
+      post_fixture()
+      post_fixture()
+      post_fixture()
+      post_fixture()
+
+      assert Projects.list_posts() == []
+    end
+
+    test "list_posts/2 returns the requested published posts with limit and offet" do
       posts =
         Enum.to_list(1..15)
-        |> Enum.map(fn _ -> post_fixture() end)
+        |> Enum.map(fn _ -> post_fixture(%{published: true}) end)
 
       assert Enum.count(Projects.list_posts(0)) == 10
       assert Enum.count(Projects.list_posts(0, 2)) == 2

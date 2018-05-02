@@ -21,7 +21,17 @@ defmodule BuiltWithElixir.Projects.Post do
   @doc false
   def changeset(post, attrs) do
     post
-    |> cast(attrs, [:title, :description, :author, :website_url, :github_url, :image_url, :type, :published, :author_email])
+    |> cast(attrs, [
+      :title,
+      :description,
+      :author,
+      :website_url,
+      :github_url,
+      :image_url,
+      :type,
+      :published,
+      :author_email
+    ])
     |> validate_required([
       :title,
       :description,
