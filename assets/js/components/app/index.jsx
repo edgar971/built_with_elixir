@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import ProjectsList from '../projectsList'
 import ProjectModal from '../projectModal'
 import Pagination from '../pagination'
@@ -96,11 +96,11 @@ class App extends Component {
         const { selectedProject } = this.state
 
         return (
-            <div>
+            <Fragment>
                 <ProjectsList onProjectClick={this.onProjectClick} projects={this.state.projects} />
                 <Pagination onClick={this.loadMore} isLoading={this.state.isLoading}/>
                 <ProjectModal showModal={this.state.showModal} closeModal={this.closeModal} project={this.state.selectedProject} />
-            </div>
+            </Fragment>
         )
     }
 }
