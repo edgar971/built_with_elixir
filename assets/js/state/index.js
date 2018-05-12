@@ -3,7 +3,9 @@ class StateAPI {
 
   constructor() {
     this.data = {
-      projects: []
+      projects: [],
+      offset: 0,
+      limit: 10
     }
 
     this.subscriptions = {}
@@ -50,6 +52,12 @@ class StateAPI {
   setProjects(projects) {
     this.mergeWithState({
       projects
+    })
+  }
+
+  setOffet(offset) {
+    this.mergeWithState({
+      offset
     })
   }
 

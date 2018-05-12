@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
 import ProjectsList from '../projectsList'
 import ProjectModal from '../projectModal'
+import Pagination from '../pagination'
 import { fetchProjects } from '../../api'
 import GA from '../../ga'
+
+const DEFAULT_OFFSET_INCREMENTOR = 10
 
 class App extends Component {
 
@@ -14,15 +17,19 @@ class App extends Component {
         this.onProjectClick = this.onProjectClick.bind(this)
         this.closeModal = this.closeModal.bind(this)
         this.onStoreChange = this.onStoreChange.bind(this)
+        this.loadMore = this.loadMore.bind(this)
     }
 
     appState() {
-        const { projects } = this.props.store.getState()
+        const { projects, offset, limit } = this.props.store.getState()
 
         return {
             projects,
+            offset,
+            limit,
             selectedProject: {},
-            showModal: false
+            showModal: false, 
+            isLoading: false
         }
     }
 
@@ -61,9 +68,22 @@ class App extends Component {
         }
     }
 
+    async loadMore() {
+        this.setState({ isLoading: true })
+        const offset = this.state.offset + DEFAULT_OFFSET_INCREMENTOR
+        
+        const { data } = await fetchProjects(offset, this.state.limit)
+
+        this.props.store.setProjects([...this.state.projects, ...data])
+        this.props.store.setOffet(offset)
+        this.setState({ isLoading: false })        
+    }
+
     async componentDidMount() {
-        this.subscriptionId = this.props.store.subscribe(this.onStoreChange);
-        const { data } = await fetchProjects(0, 45)
+        this.subscriptionId = this.props.store.subscribe(this.onStoreChange)
+
+        const { data } = await fetchProjects(this.state.offset, this.state.limit)
+
         this.props.store.setProjects(data)
     }
 
@@ -78,6 +98,7 @@ class App extends Component {
         return (
             <div>
                 <ProjectsList onProjectClick={this.onProjectClick} projects={this.state.projects} />
+                <Pagination onClick={this.loadMore} isLoading={this.state.isLoading}/>
                 <ProjectModal showModal={this.state.showModal} closeModal={this.closeModal} project={this.state.selectedProject} />
             </div>
         )
