@@ -4,6 +4,7 @@ import ProjectModal from '../projectModal'
 import Pagination from '../pagination'
 import { fetchProjects } from '../../api'
 import GA from '../../ga'
+import SubmitProjectForm from '../submitProjectForm';
 
 const DEFAULT_OFFSET_INCREMENTOR = 10
 
@@ -13,7 +14,8 @@ class App extends Component {
         super(props)
 
         this.state = this.appState()
-
+        this.formDomNode = document.querySelector('#submit-form')
+        
         this.onProjectClick = this.onProjectClick.bind(this)
         this.closeModal = this.closeModal.bind(this)
         this.onStoreChange = this.onStoreChange.bind(this)
@@ -100,6 +102,7 @@ class App extends Component {
                 <ProjectsList onProjectClick={this.onProjectClick} projects={this.state.projects} />
                 <Pagination onClick={this.loadMore} isLoading={this.state.isLoading}/>
                 <ProjectModal showModal={this.state.showModal} closeModal={this.closeModal} project={this.state.selectedProject} />
+                <SubmitProjectForm domNode={this.formDomNode} />
             </Fragment>
         )
     }

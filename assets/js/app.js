@@ -13,5 +13,4 @@ GA.pageview('/');
 const store = new StateAPI()
 
 ReactDOM.render(<App store={store} />, document.querySelector('#app-root'))
-ReactDOM.render(<SubmitProjectForm />, document.querySelector('#submit-form'))
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { createPortal } from 'react-dom'
 import ProjectForm from './projectForm'
 import { postProject } from '../../api'
 
@@ -84,7 +85,7 @@ class SubmitProjectForm extends Component {
   }
 
   render() {
-    return (
+    return createPortal(
       <div>
         {!this.state.submitted ?
           <div>
@@ -106,7 +107,7 @@ class SubmitProjectForm extends Component {
           </div>
         }
       </div>
-    )
+    , this.props.domNode)
   }
 }
 
