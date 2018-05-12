@@ -55,7 +55,7 @@ class StateAPI {
     })
   }
 
-  setOffet(offset) {
+  setOffset(offset) {
     this.mergeWithState({
       offset
     })

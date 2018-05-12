@@ -77,7 +77,7 @@ class App extends Component {
         const { data } = await fetchProjects(offset, this.state.limit)
 
         this.props.store.setProjects([...this.state.projects, ...data])
-        this.props.store.setOffet(offset)
+        this.props.store.setOffset(offset)
         this.setState({ isLoading: false })        
     }
 
