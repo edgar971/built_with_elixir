@@ -13,3 +13,4 @@ before_script:
 - mix ecto.migrate
 script:
 - mix test
+- npm test --prefix assets
