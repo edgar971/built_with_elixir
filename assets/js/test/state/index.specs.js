@@ -20,7 +20,7 @@ context('#StateAPI', () => {
   })
 
   describe('when subscribing to state changes', () => {
-    const expectedState = {
+    const defaultState = {
       projects: [],
       offset: 0,
       limit: 10
@@ -39,9 +39,26 @@ context('#StateAPI', () => {
       callback.should.have.been.calledOnce
     })
 
+    it('should set the correct state', () => {
+      const projects = [{ name: 'cool' }]
+      const offset = 10
+      const expectedState = {
+        ...defaultState,
+        projects,
+        offset
+      }
+
+      state.setProjects(projects)
+      state.setOffset(10)
+
+      const stateOutput = state.getState()
+
+      stateOutput.should.deep.equal(expectedState)
+    });
+
     it('should return the state', () => {
       const data = state.getState()
-      data.should.deep.equal(expectedState)
+      data.should.deep.equal(defaultState)
     })
   })
 
