@@ -4,7 +4,8 @@
   "scripts": {
     "deploy": "brunch build --production",
     "watch": "brunch watch --stdin",
-    "test": "mocha --opts ./js/test/mocha.opts --watch"
+    "test": "mocha --opts ./js/test/mocha.opts",
+    "test:watch": "npm test -- --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",
