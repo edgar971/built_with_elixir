@@ -11,6 +11,7 @@ before_script:
 - cp config/travis.exs config/test.exs
 - mix ecto.create
 - mix ecto.migrate
+- npm install --prefix assets
 script:
 - mix test
 - npm test --prefix assets
