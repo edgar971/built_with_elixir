@@ -19,7 +19,9 @@
   },
   "devDependencies": {
     "babel-brunch": "6.1.1",
+    "babel-core": "^6.26.3",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "brunch": "2.10.9",
