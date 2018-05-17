@@ -1,5 +1,6 @@
 --require babel-core/register
 --require babel-polyfill
 --reporter spec  
+--ui bdd
 
 **/*.specs.js

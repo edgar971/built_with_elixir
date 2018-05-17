@@ -1,0 +1,9 @@
+{
+  "mocha.files.glob": "**/*.specs.js",
+  "mocha.requires": [
+    "babel-core/register",
+    "babel-polyfill"
+  ],
+  "mocha.logVerbose": true,
+  "mocha.subdirectory": "assets"
+}
