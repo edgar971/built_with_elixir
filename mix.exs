@@ -42,6 +42,7 @@ defmodule BuiltWithElixir.Mixfile do
       {:cowboy, "~> 1.0"},
       {:json, "~> 1.0"},
       {:credo, "~> 0.9.1"},
+      {:plug_cowboy, "~> 1.0"},
       {:cloudini, "~> 1.2"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:mix_test_watch, "~> 0.6.0", only: :dev}
